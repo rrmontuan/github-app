@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  github-app:
+    volumes:
+      - .:/app
+      - /app/node_modules
+    build:
+      context: ./
+    environment:
+      NODE_ENV: development
+    ports:
+    - 3000:3000
