@@ -32,11 +32,19 @@ module.exports = validate({
       loader: 'standard'
     }],
 
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      include: /src/,
-      loader: 'babel'
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        include: /src/,
+        loader: 'babel'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        include: /src/,
+        loaders: ['style', 'raw']
+      }
+    ]
   }
 })
