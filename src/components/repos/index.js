@@ -1,9 +1,10 @@
 'use strict'
 
 import React, { PropTypes } from 'react'
+import style from './repos.css'
 
 const Repos = ({ className, title, repos }) => (
-  <div className={className}>
+  <div className={`${style.reposList} ${className}`}>
     <h2>{title}</h2>
     <ul>
       {repos.map((repo, index) => (

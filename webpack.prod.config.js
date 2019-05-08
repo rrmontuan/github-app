@@ -58,8 +58,14 @@ module.exports = validate({
         test: /\.css$/,
         exclude: /node_modules/,
         include: /src/,
-        loader: ExtractTextPlugin.extract('style', 'css')
+        loader: ExtractTextPlugin.extract('style', 'css?modules=true&camelCase=true&localIdentName=[name]_[local]_[hash:base64:5]')
       }
     ]
+  },
+  resolve: {
+    alias: {
+      src: path.join(__dirname, 'src'),
+      components: path.join(__dirname, 'src', 'components')
+    }
   }
 })
