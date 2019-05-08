@@ -30,7 +30,7 @@ module.exports = validate({
     new ExtractTextPlugin('[name]-[hash].css'),
     new HtmlPlugin({
       title: 'Github App (Html Asset)',
-      template: path.join(__dirname, 'src', 'html', 'template.html')
+      template: path.join(__dirname, 'src', 'html', 'template-dev.html')
     })
   ],
 
